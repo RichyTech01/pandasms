@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar {
+   display: none;
+ }
+
+ .LandingResp{
+   @apply xl:ml-[150px] lg:ml-[80px] ml-[20px]
+ }
+ .LandingRespRight{
+  @apply xl:mr-[150px] lg:mr-[80px]  mr-[20px]
+}
