@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import FAQAccordion from "@/components/LandingPageUi/FAQAccordion";
+import FAQAccordion from "@/components/LandingPage/FAQAccordion";
 
 const FaqSec = () => {
 

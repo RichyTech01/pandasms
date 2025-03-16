@@ -17,8 +17,19 @@ html {
  }
 
  .LandingResp{
-   @apply xl:ml-[150px] lg:ml-[80px] ml-[20px]
+   @apply xl:ml-[150px] lg:ml-[80px] mx-[20px]
  }
  .LandingRespRight{
   @apply xl:mr-[150px] lg:mr-[80px]  mr-[20px]
+}
+
+.center{
+  @apply items-center justify-center flex
+}
+
+.bt{
+  @apply text-[#116EFC]
+}
+.bg{
+  @apply text-[#116EFC]
 }

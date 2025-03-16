@@ -30,13 +30,13 @@ const Hero = () => {
                     {/* Mobile Button  */}
 
                     <span className="max-w-[204px w-full md:hidden center">
-                       <Button label="Get Started" MW={335}/>
+                       <Button label="Get Started" width="max-w-[335px]"/>
                     </span>
 
                     {/* Desktop button  */}
                     
                     <span className="max-w-[204px] w-full hidden md:block ">
-                       <Button label="Get Started" MW={204}/>
+                       <Button label="Get Started" width={"max-w-[204px] "}/>
                     </span>
                     <button className="rounded-[16px] h-[56px] md:max-w-[126px] max-w-[335px] w-full border border-[#116EFC] text-[14px] text-[#116EFC] flex items-center justify-center">
                         <Image src={Faq} alt="faq" className="mr-[4px]" />
@@ -55,7 +55,7 @@ const Hero = () => {
 
         <div className="bg-[#116EFC] h-auto lg:h-[870px] justify-center fle mt-[30px] px-[20px]">
            <div className="md:pt-[75px] pt-[60px] flex flex-col items-center">
-           <div className="h-[56px] w-full max-w-[487px] sm:px-[0px] px-[20px flex items-center gap-[8px] overflow-x-auto mx-[20px no-scrollbar ">
+           <div className="h-[56px] w-full max-w-[487px] sm:px-[0px] px-[20px flex items-center gap-[8px] overflow-x-auto mx-[20px scroll-container ">
             <button
                 className={`flex-shrink-0 hover:font-semibold rounded-[16px] h-full text-white text-[14px] w-[157px] ${
                     activeButton === "Service" ? "bg-[#FFFFFF1A] font-semibold" : "hover:bg-[#FFFFFF1A]"
