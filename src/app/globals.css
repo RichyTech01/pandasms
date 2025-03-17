@@ -27,6 +27,15 @@ html {
   @apply items-center justify-center flex
 }
 
+.between{
+  @apply items-center justify-between flex
+}
+
+.fc{
+  @apply items-center flex
+}
+
+
 .bt{
   @apply text-[#116EFC]
 }

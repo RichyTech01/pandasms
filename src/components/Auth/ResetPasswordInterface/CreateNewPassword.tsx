@@ -1,6 +1,6 @@
 
 "use client";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Image from "next/image";
 import Button from "@/Common/Button";
 import ResetPassImg from "../../../../public/Svg/ResetPassImg.svg";
@@ -9,11 +9,12 @@ import SuccesfullMessage from "@/Common/SuccesfullMessage";
 
 const CreateNewPassword = () => {
 
-    const router = useRouter()
+    const [changePass, setChangePass] = useState(false)
 
     return ( 
          <div className="md:my-[127px] my-[40px] md:flex-row flex flex-col items-center xl:mx-[250px] lg:mx-[50px]  ">
-            <SuccesfullMessage />
+            {changePass &&  <SuccesfullMessage />}
+           
             <div className="center md:w-[53%] w-full ">
                 <Image src={ResetPassImg} alt="sign-img" />
             </div>
@@ -27,13 +28,13 @@ const CreateNewPassword = () => {
                      label="Password"
                      placeholder="Your new password"
                      type="password"
-                     textSize="text-[30px] bt pb-1"
+                     textSize="text-[30px] bt -pt-3"
                   />
                   <Input 
                      label="Confirm Password"
                      placeholder="Confirm new password"
                      type="password"
-                     textSize="text-[30px] bt pb-1"
+                     textSize="text-[30px] bt -pt-3"
                   />
             </div>
 
@@ -41,6 +42,7 @@ const CreateNewPassword = () => {
                 <Button 
                   label="Change Password"
                   MW={'100%'}
+                  onClick={() => setChangePass(prev => !prev)}
                 />
               </div> 
               

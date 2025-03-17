@@ -38,6 +38,7 @@ const SignInInterface = () => {
                 <Button 
                   label="Login"
                   MW={'100%'}
+                  onClick={() => router.push('/Dashboard')}
                 />
               </div> 
               
