@@ -42,3 +42,7 @@ html {
 .bg{
   @apply text-[#116EFC]
 }
+
+.semiSix{
+  @apply text-[16px] font-semibold text-[#131619]
+}
