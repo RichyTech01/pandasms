@@ -8,7 +8,7 @@ const SearchInput = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="relative lg:w-[341px] w-full  md:max-w-[243px] ">
+    <div className="relative">
       <Image src={SearchIcon} alt="search-icon" width={20} height={20} className="absolute left-3 top-1/2 -translate-y-1/2" />
       <input
         type="text"

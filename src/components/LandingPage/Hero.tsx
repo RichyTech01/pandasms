@@ -29,14 +29,14 @@ const Hero = () => {
                 <div className="flex flex-col md:flex-row items-center gap-[8px] mt-[20px]">
                     {/* Mobile Button  */}
 
-                    <span className="max-w-[204px w-full md:hidden center">
+                    <span className="max-w-[204px w-full md:hidden center ">
                        <Button label="Get Started" width="max-w-[335px]"/>
                     </span>
 
                     {/* Desktop button  */}
                     
-                    <span className="max-w-[204px] w-full hidden md:block ">
-                       <Button label="Get Started" width={"max-w-[204px] "}/>
+                    <span className="max-w-[204px] w-full hidden md:block md:ml-4 hover:opacity-90">
+                       <Button label="Get Started" width={"max-w-[204px] hover:opacity-70"}/>
                     </span>
                     <button className="rounded-[16px] h-[56px] md:max-w-[126px] max-w-[335px] w-full border border-[#116EFC] text-[14px] text-[#116EFC] flex items-center justify-center">
                         <Image src={Faq} alt="faq" className="mr-[4px]" />

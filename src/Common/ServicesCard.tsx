@@ -5,11 +5,11 @@ import Lovedicon from "../../public/DashboardSvg/LovedIcon.svg"
 import InitialLove from "../../public/DashboardSvg/InitialLove.svg"
 import { useState } from "react";
 
-const ServicesCard = () => {
+const ServicesCard = ({onClick}: {onClick: () => void}) => {
     const [loved, setLoved] = useState(false)
 
     return ( 
-        <div className="border-[0.8px] border-[#E6E6E6] rounded-[8px] px-[13px] py-[19px] w-full flex items-start justify-between mt-[12px]">
+        <div className="border-[0.8px] border-[#E6E6E6] rounded-[8px] px-[13px] py-[19px] w-full flex items-start justify-between mt-[12px] cursor-pointer " onClick={onClick}>
             <div className="fc ">
                 <Image src={WhatsApp} alt="whatsapp"/>
                 <div className="ml-[20px] ">
@@ -18,7 +18,10 @@ const ServicesCard = () => {
                 </div>
             </div>
 
-            <div className="" onClick={() => setLoved(prev => !prev)}>
+            <div className="" onClick={(e) => {
+                    e.stopPropagation();  
+                    setLoved(prev => !prev);
+                }}>
                 {loved? <Image src={Lovedicon} alt="loved-"/> : <Image src={InitialLove} alt="loved-"/>}
             </div>
 

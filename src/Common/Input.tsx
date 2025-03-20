@@ -14,7 +14,7 @@ const Input: React.FC<InputProps> = ({type, textSize="text-[10px]",  label, ...p
       </label>
       <input
         type={type}
-        className={`border border-[#E6E6E6] px-[26.59px] h-[70px] rounded-[16px] focus:outline-none focus:ring-2 focus:ring-[#116EFC] placeholder:text-[14px]  placeholder:text-[#8A8A8A] text-[#8A8A8A]  transition-all ${textSize} `}
+        className={`border border-[#E6E6E6] px-[26.59px] h-[70px] rounded-[16px] focus:outline-none focus:ring-2 focus:ring-[#116EFC] placeholder:text-[14px]  placeholder:text-[#8A8A8A] text-[#8A8A8A] text-[14px] transition-all ${textSize} `}
         {...props}
       />
     </div>

@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
   const pathname = usePathname();
 
     return (
-        <aside className="w-[226px] bg-[#116EFC] pt-[39px] px-[17px] hidden md:flex  ">
+        <aside className="w-[226px] bg-[#116EFC] pt-[39px] px-[17px] hidden md:flex h-full">
           <ul>
             <li className={`py-[16px] px-[22px] rounded-[8px] fc ${pathname === "/Dashboard" ? "font-semibold text-[14px] text-[#0F64E5] bg-white " : "text-white font-normal "} cursor-pointer`}>
              {pathname === "/Dashboard"? <Image src={DasboardActiveicon} alt="dash-ison"/>:<Image src={Dasboardicon} alt="dash-ison"/> } 
