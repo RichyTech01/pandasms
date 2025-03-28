@@ -9,28 +9,28 @@ import Hamburger  from "../../../public/DashboardSvg/hamburgerIcon.svg";
 
 const DashboardHeader = () => {
     return ( 
-        <div className="bg-white sm:py-[41px] py-[38px] items-center flex md:px-[33px] px-[19.8px]  ">
+        <div className="bg-white sm:py-[41px] py-[38px] items-center flex md:px-[33px] px-[19.8px] w-full fixed top-0 left-0 z-50 ">
           <div className="between w-full">
-            <div className="flex items-center ">
-                <h1 className="text-[#0F64E5] font-Geint leading-[31.7px] font-bold md:text-[31.7px] flex items-center text-[19.97px]  ">
-                    <Image src={Logo} alt="logo" className="mr-[8.97px]  " priority />
+            <div className="flex items-center">
+                <h1 className="text-[#0F64E5] font-Geint leading-[31.7px] font-bold md:text-[31.7px] flex items-center text-[19.97px]">
+                    <Image src={Logo} alt="logo" className="mr-[8.97px]" priority />
                     PandaSMS
                 </h1>
 
-                <div className=" items-center ml-[30px] hidden md:flex ">
+                <div className="items-center ml-[30px] hidden md:flex">
                     <p className="text-[14px] text-[#545454] py-[6px] px-[20px] cursor-pointer">Home</p>
-                    <p className="text-[14px] text-[#545454] ml-[8px]  py-[6px] px-[20px] cursor-pointer">Support</p>
+                    <p className="text-[14px] text-[#545454] ml-[8px] py-[6px] px-[20px] cursor-pointer">Support</p>
                 </div>
             </div>
 
-            <div className="fc ">
-                <div className="h-[40px] w-[68px] rounded-[16px] bg-[#F9FAFB] center ">
+            <div className="fc">
+                <div className="h-[40px] w-[68px] rounded-[16px] bg-[#F9FAFB] center">
                     <Image src={HeaderBot} alt="header-bot"/>
                 </div>
 
-                <div className="bg-[#131619] hidden md:flex items-center rounded-[16px] py-[16px] px-[18px] ml-[15px] ">
+                <div className="bg-[#131619] hidden md:flex items-center rounded-[16px] py-[16px] px-[18px] ml-[15px]">
                    <Image src={WalletIcon} alt="HeaderPlus-Icon"/>
-                    <p className="text-[18px] font-Geint font-medium text-white mx-[8px] cursor-pointer ">$200.34</p>
+                    <p className="text-[18px] font-Geint font-medium text-white mx-[8px] cursor-pointer">$200.34</p>
                     <Image src={HeaderPlusIcon} alt="HeaderPlus-Icon"/>
                 </div>
 
@@ -40,7 +40,7 @@ const DashboardHeader = () => {
             </div>
          </div>
         </div>
-     );
+    );
 }
  
 export default DashboardHeader;

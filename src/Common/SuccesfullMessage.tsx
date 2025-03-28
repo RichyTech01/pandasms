@@ -4,8 +4,10 @@ import Image from "next/image";
 import SuccesImg from "../../public/Svg/SuccesMessageIcon.svg";
 import Button from "./Button";
 import { motion } from "framer-motion";
+import CloseIcon from "../../public/DashboardSvg/CloseIcon.svg"
 
-const SuccesfullMessage = () => {
+const SuccesfullMessage = ({handleClose}: {handleClose: () => void}) => {
+
   const router = useRouter();
 
   return (
@@ -18,8 +20,13 @@ const SuccesfullMessage = () => {
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
         className="bg-[#F9FAFB] rounded-[16px] hidden md:flex py-[27.2px] px-[26px] w-[480px] absolute top-0 right-0 items-center mt-36 mr-20"
       >
+        <div className="absolute right-0 top-0 center mt-[14px] h-[28px] w-[28px] mr-[15px]  " onClick={handleClose} >
+          <Image src={CloseIcon} alt="close-icon"/>
+        </div>
+
         <Image src={SuccesImg} alt="success-img" />
         <div className="ml-[30px] max-w-[305px] ">
+
           <p className="bt text-[16px]">Password Changed</p>
           <p className="text-[14px] text-[#131619] mt-[8px]">
             Your password has been changed successfully. Login to access account.

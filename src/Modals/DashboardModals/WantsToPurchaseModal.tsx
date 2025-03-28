@@ -11,6 +11,7 @@ type WantsToPurchaseModal = {
 
 const WantsToPurchaseModal = ({ setIsOpen}: WantsToPurchaseModal) => {
 
+    const [showCountryModal, setShowCountryModal] = useState(false)
     const [step, setStep] = useState<number>(1) 
 
     const handleNextstep = () => {
@@ -18,10 +19,12 @@ const WantsToPurchaseModal = ({ setIsOpen}: WantsToPurchaseModal) => {
     }
 
     return ( 
-        <div className="flex justify-center h-full w-full px-[20px]  ">
+        <div className="flex justify-center h-full w-full  ">
          {step === 1 && <PurchaseNumber 
            setIsOpen={setIsOpen}
            handleNextstep={handleNextstep}
+           showCountryModal={showCountryModal}
+           handleshowCountryModal={() => setShowCountryModal(!showCountryModal)} 
           />
         }
 

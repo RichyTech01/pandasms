@@ -13,7 +13,9 @@ const CreateNewPassword = () => {
 
     return ( 
          <div className="md:my-[127px] my-[40px] md:flex-row flex flex-col items-center xl:mx-[250px] lg:mx-[50px]  ">
-            {changePass &&  <SuccesfullMessage />}
+            {changePass &&  <SuccesfullMessage 
+              handleClose={() => setChangePass(prev => !prev)}
+            />}
            
             <div className="center md:w-[53%] w-full ">
                 <Image src={ResetPassImg} alt="sign-img" />
