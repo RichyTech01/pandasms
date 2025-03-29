@@ -2,6 +2,8 @@
 import { useState } from "react";
 import PurchaseNumber from "@/components/DashboardInterface/dashboard/PurchaseNumber";
 import GetCode from "@/components/DashboardInterface/dashboard/GetCode";
+import ChangeNumber from "@/components/DashboardInterface/dashboard/ChangeNumber";
+import CancelledVerification from "@/components/DashboardInterface/dashboard/CancelledVerification";
 
 
 type WantsToPurchaseModal = {
@@ -33,6 +35,17 @@ const WantsToPurchaseModal = ({ setIsOpen}: WantsToPurchaseModal) => {
             setIsOpen={setIsOpen} 
           />
         }
+
+        {step === 3 && <ChangeNumber 
+           handleNextstep={handleNextstep}
+           setIsOpen={setIsOpen} 
+        />}
+
+         {step === 4 && <CancelledVerification 
+           handleNextstep={handleNextstep}
+           setIsOpen={setIsOpen} 
+        />}
+        
        </div>
      );
 }

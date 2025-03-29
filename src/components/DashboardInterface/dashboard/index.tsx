@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+
 import Features from "./Favourite";
 import SearchInput from "@/Common/SearchInput";
 import AllavailableService from "./AllavailableService";
@@ -10,7 +10,8 @@ const DashboardInterface = ({onClick}: {onClick: () => void}) => {
 
 
   return ( 
-      <div className="bg-white w-full lg:px-[48px] md:pt-[45px] mt-[120px] px-[20px] flex-1 rounded-[20px] relative  ">
+    <div className="md:px-[36px] py-[20px] md:bg-[#F9FAFB] h-screen">
+      <div className="bg-white w-full lg:px-[48px] md:py-[45px] mt-[120px] px-[20px] flex-1 rounded-[20px] relative  ">
           <div className="md:justify-between md:flex-row flex flex-col md:items-center">
               <div className="mb-[16px]  ">
                   <p className="text-[#131619] text-[16px] font-semibold">
@@ -40,6 +41,7 @@ const DashboardInterface = ({onClick}: {onClick: () => void}) => {
           <div>
               <AllavailableService onClick={onClick} />
           </div>
+      </div>
       </div>
   );
 };
