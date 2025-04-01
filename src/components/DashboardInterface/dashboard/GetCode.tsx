@@ -6,6 +6,8 @@ import TextInputWithCopy from "@/Common/TextInputWithCopy";
 import TextAreaInput from "@/Common/TextAreaInput";
 import CancelIcon from "@/Common/CancelIcon";
 import Button from "@/Common/Button";
+import ClipBoardSuccess from "@/Common/ClipBoardSuccess";
+
 
 type GetcodeProps = {
     handleNextstep: () => void
@@ -58,8 +60,8 @@ const GetCode = ({handleNextstep, setIsOpen}: GetcodeProps) => {
                     <p className="text-[14px]  text-[#131619] md:hidden  ">Time left:<span className="text-[#DF0000]  "> 19:59 </span></p>
                  </div>
                
-                {copied && <div className="bt bg-white rounded-[16px] text-[12px] font-medium cente mx-auto max-w-[200px] max-h-[30px] center absolute inset-[90px] ">
-                    Copied to clipboard
+                {copied && <div className="absolute inset-[90px]  ">
+                     <ClipBoardSuccess />
                 </div> }
             </div>
 

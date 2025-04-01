@@ -9,7 +9,7 @@ import Hamburger  from "../../../public/DashboardSvg/hamburgerIcon.svg";
 
 const DashboardHeader = () => {
     return ( 
-        <div className="bg-white sm:py-[41px] py-[38px] items-center flex md:px-[33px] px-[19.8px] w-full fixed top-0 left-0 z-50 ">
+        <div className="bg-white  sm:py-[41px] py-[38px] items-center flex md:px-[33px] px-[19.8px] w-full fixed top-0 left-0 z-50 ">
           <div className="between w-full">
             <div className="flex items-center">
                 <h1 className="text-[#0F64E5] font-Geint leading-[31.7px] font-bold md:text-[31.7px] flex items-center text-[19.97px]">

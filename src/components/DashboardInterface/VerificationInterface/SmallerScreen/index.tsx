@@ -1,6 +1,6 @@
 
 
-import VerificationCard from "@/Common/VerificationCard";
+import MobileTable from "@/Common/MobileTable";
 
 const cardData1 = [
    { label: 'Created Date', data: '12/11/2024, 3:29:25 PM' },
@@ -16,9 +16,20 @@ const SmallerScreen = () => {
 
     return ( 
         <div>
-           <VerificationCard
-             data={cardData1}
-            />
+           <MobileTable 
+            label1="Created Date"
+            data1="12/11/2024, 3:29:25 PM"
+            label2="Service"
+            data2="Snapchat"
+            label3="Number"
+            data3="9876543210"
+            label4="OTP"
+            data4="N/A"
+            label5="Cost"
+            data5="$0.00"
+            label6="Status"
+            data6="Pending"
+           />
         </div>
      );
 }  

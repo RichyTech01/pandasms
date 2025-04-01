@@ -5,14 +5,17 @@ import LargerScreenSupport from "./LargerScreenSupport";
 import SmallerScreenTicketTable from "./SmallerScreenTicketTable";
 import React from "react";
 
+
 type SupportProps = {
     setShowChat:React.Dispatch<React.SetStateAction<boolean>>
+    setshowSuccess:React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const SupportInterface = ({setShowChat}: SupportProps) => {
+const SupportInterface = ({setShowChat, setshowSuccess}: SupportProps) => {
 
     return ( 
-        <div className="md:w-full mx-auto  md:bg-[#F9FAFB] md:border-[0.5px] border-[#E6E6E6] lg:px-[48px] mt-[100px] px-[20px] flex-1 py-[30px] md:rounded-[20px] relative md:min-h-[650px] md:h-full h-screen  ">
+        <div className="md:w-full mx-auto  md:bg-[#F9FAFB] md:border-[0.5px] border-[#E6E6E6] lg:px-[48px] mt-[100px] px-[20px] flex-1 py-[30px] md:rounded-[20px] relative md:min-h-[650px] md:h-full w-full ">
+           
             <div className=" hidden md:flex flex-row items-center justify-between "> 
                 <div>
                     <p className="text-[#131619] text-[16px] font-medium">Support Ticket</p>
@@ -27,11 +30,15 @@ const SupportInterface = ({setShowChat}: SupportProps) => {
                 </div>
             </div>
 
-            <div className=" hidden md:block">
-                <LargerScreenSupport setShowChat={setShowChat} />
+            <div className=" hidden md:block ">
+                <LargerScreenSupport 
+                setShowChat={setShowChat} 
+                setshowSuccess={setshowSuccess} />
             </div>
             <div className="md:hidden">
-                <SmallerScreenTicketTable />
+                <SmallerScreenTicketTable 
+                 setShowChat={setShowChat}
+                 setshowSuccess={setshowSuccess}/>
             </div>
         </div>
      );

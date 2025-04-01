@@ -18,7 +18,7 @@ const SupportHistoryMobilecard = () => {
                         className={`text-[12px] rounded-[16px] px-[25px] py-[10px] ${
                           item.status === 'Pending'
                             ? 'text-[#FFCC00] bg-[#FFFAE6]'
-                            : item.status === 'Resolved'
+                            : item.status === 'Resolved'|| 'Completed'
                             ? 'text-[#00CC00] bg-[#E6FFE6]'
                             : 'text-[#FF0000] bg-[#FFE6E6]'
                         }`}

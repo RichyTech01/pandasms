@@ -2,9 +2,10 @@ import React from "react";
 
 type LargerCompProps ={
   setShowChat:  React.Dispatch<React.SetStateAction<boolean>>
+  setshowSuccess:  React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const LargerScreenSupport = ({setShowChat}: LargerCompProps) => {
+const LargerScreenSupport = ({setShowChat, setshowSuccess}: LargerCompProps) => {
   const tickets = [
     {
       date: "04/03/2025 9:15:10 AM",
@@ -44,8 +45,8 @@ const LargerScreenSupport = ({setShowChat}: LargerCompProps) => {
         return (
           <div
             key={index}
-            className="fc px-[20px] h-auto min-h-[60px] bg-[#F9FAFB]  cursor-pointer mb-[16px] border-[0.5px] border-[#E6E6E6] rounded-[20px]"  onClick={()=> setShowChat(prev => !prev)}>
-            <div className="text-[#131619] text-sm w-[22%] flex flex-col pr-1 ">
+            className="fc px-[20px] h-auto min-h-[60px] bg-[#F9FAFB]  cursor-pointer mb-[16px] border-[0.5px] border-[#E6E6E6] rounded-[20px]"  onClick={()=> {setshowSuccess(false); setShowChat(prev => !prev) }}>
+            <div className="text-[#131619]  text-sm w-[22%] flex flex-col pr-1 ">
               <span>{date}</span>
               <span>
                 {time} {period}
