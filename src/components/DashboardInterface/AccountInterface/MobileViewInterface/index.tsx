@@ -7,7 +7,6 @@ import Button from "@/Common/Button";
 import LogoutImg from "../../../../../public/DashboardSvg/LogoutIcon.svg"
 
 
-
 const statsData = [
     { label: "Total purchase", value: 90 },
     { label: "Funds spent", value: "$90.2" },
@@ -18,9 +17,11 @@ const statsData = [
   type AccountMobileScreenProps = {
     isCopied: boolean
     handleCopy: () => void
+    setOpenChangePasswordModal: React.Dispatch<React.SetStateAction<boolean>>
   }
 
-const MobileViewInterface = ({isCopied, handleCopy}: AccountMobileScreenProps) => {
+
+const MobileViewInterface = ({isCopied, handleCopy, setOpenChangePasswordModal}: AccountMobileScreenProps) => {
     return ( 
         <div className="bg-[#F9FAFB] h-[100vh] overflow-auto py-[98px]">
             <div className="bg-white mt-[18px] rounded-[12px] mx-[20px] py-[20px] flex flex-col items-center   ">
@@ -53,6 +54,7 @@ const MobileViewInterface = ({isCopied, handleCopy}: AccountMobileScreenProps) =
                   <p className="black font-bold text-[18px]  text-center my-[20px]">Security Settings</p>
                   <Button 
                     label="Change password"
+                    onClick={() => setOpenChangePasswordModal(prev => !prev)}
                   />
                 </div>
 
@@ -67,7 +69,6 @@ const MobileViewInterface = ({isCopied, handleCopy}: AccountMobileScreenProps) =
                  <Image src={LogoutImg} alt="logout-icon"/>
                   <p className="text-[#DF0000] text-[16px] ml-[8px]">Logout</p>
               </div>
-              
         </div>
      );
 }

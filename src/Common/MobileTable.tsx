@@ -13,11 +13,12 @@ type MobileTableProps = {
     data4?: string
     data5?: string
     data6?: string
+    onClick: () => void
 }
 
-const MobileTable = ({ label1, label2, label3, label4, label5, label6, data1, data2, data3, data4, data5, data6 }: MobileTableProps) => {
+const MobileTable = ({ label1, label2, label3, label4, label5, label6, data1, data2, data3, data4, data5, data6, onClick }: MobileTableProps) => {
     return (
-        <div className="border border-[#E6E6E6] bg-[#F9FAFB] rounded-[12px] py-[21px] px-[16px] space-y-[12px] w-full">
+        <div className="border border-[#E6E6E6] bg-[#F9FAFB] rounded-[12px] py-[21px] px-[16px] space-y-[12px] w-full " onClick={onClick}>
             {label1 && data1 && (
                 <div className="between">
                     <p className="text-[12px] black">{label1}</p>
@@ -39,6 +40,7 @@ const MobileTable = ({ label1, label2, label3, label4, label5, label6, data1, da
             {label4 && data4 && (
                 <div className="between">
                     <p className="text-[12px] black">{label4}</p>
+                  
                     <p className="text-[12px] black">{data4}</p>
                 </div>
             )}

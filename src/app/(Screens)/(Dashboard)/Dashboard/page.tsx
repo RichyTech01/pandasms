@@ -21,7 +21,7 @@ const Dashboard = () => {
 
         {/* Modal (absolute to cover full content page) */}
         {showModal && (
-          <div className="fixed pt-[120px] scroll-container flex items-center justify-center inset-0 bg-[#F9FAFB] md:bg-transparent  b">
+          <div className="fixed pt-[120px] scroll-container flex items-center justify-center inset-0 bg-[#F9FAFB] md:bg-transparent ">
             <WantsToPurchaseModal isOpen={showModal} setIsOpen={setShowModal} />
           </div>
         )}

@@ -1,5 +1,5 @@
 'use client'
-
+import { useEffect } from "react";
 import Image from "next/image";
 import UserImg from "../../../../../public/DashboardSvg/AccountIcon.svg"
 import LogoutImg from "../../../../../public/DashboardSvg/LogoutIcon.svg"
@@ -16,12 +16,14 @@ const statsData = [
   type AccountLargeScreenProps = {
     isCopied: boolean
     handleCopy: () => void
+    setOpenChangePasswordModal: React.Dispatch<React.SetStateAction<boolean>>
   }
 
-const AccountLargeScreen = ({handleCopy, isCopied}: AccountLargeScreenProps) => {
+const AccountLargeScreen = ({handleCopy, isCopied, setOpenChangePasswordModal}: AccountLargeScreenProps) => {
 
     return ( 
-        <div className="bd min-h-[750px] mt-[104px] w-full px-[48px] py-[35px]">
+      <>
+        <div className="bd min-h-[750px] mt-[104px] w-full px-[48px] py-[35px] relative z-50">
            <div>
               <p className="text-[18px] font-bold black ">Account Setting</p>
               <p className="text-[14px] mt-[8px] ash ">Manage your profile and account settings here</p>
@@ -59,14 +61,16 @@ const AccountLargeScreen = ({handleCopy, isCopied}: AccountLargeScreenProps) => 
               <Image src={CopyImg} alt="copy-icon " onClick={handleCopy}/>
            </div> 
 
-           <p className="mt-[19px] bt text-[14px] cursor-pointer  ">Change Password</p>
+           <p className="mt-[19px] bt text-[14px] cursor-pointer  " onClick={()=> setOpenChangePasswordModal(prev => !prev)} >Change Password</p>
 
-           {isCopied && 
-            <div className="absolute inset-0 z-50 center  ">
+          
+        </div>
+        {isCopied && 
+            <div className="absolute inset-0 z-50 center">
               <ClipBoardSuccess />
             </div>
            }
-        </div>
+        </>
      );
 }
  
