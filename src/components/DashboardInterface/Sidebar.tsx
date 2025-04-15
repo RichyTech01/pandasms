@@ -11,6 +11,7 @@ import VeriActiveIcon from "../../../public/DashboardSvg/VeriActive.svg";
 import VerificationIcon from "../../../public/DashboardSvg/VerificationIcon.svg";
 import HistoryIcon from "../../../public/DashboardSvg/HistoryIcon.svg";
 
+
 const Sidebar: React.FC = () => {
   const pathname = usePathname();
 
@@ -56,8 +57,7 @@ const Sidebar: React.FC = () => {
             pathname === "/History"
               ? "font-semibold text-[14px] text-[#0F64E5] bg-white"
               : "text-white hover:bg-[#FFFFFF1A] font-normal"
-          } cursor-pointer`}
-        >
+          } cursor-pointer`}>
           <Link href="/History" className="flex items-center py-[16px] px-[22px] w-full">
             {pathname === "/History" ? (
               <Image src={DasboardActiveicon} alt="history-icon" />
@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
         >
           <Link href="/Account" className="flex items-center py-[16px] px-[22px] w-full">
             {pathname === "/Account" ? (
-              <Image src={DasboardActiveicon} alt="account-icon" />
+              <Image className="border border-blue-500 rounded-full" src={AccountIcon} alt="account-icon" />
             ) : (
               <Image className="border border-white rounded-full" src={AccountIcon} alt="account-icon" />
             )}

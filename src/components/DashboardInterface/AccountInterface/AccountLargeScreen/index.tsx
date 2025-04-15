@@ -1,5 +1,6 @@
 'use client'
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import UserImg from "../../../../../public/DashboardSvg/AccountIcon.svg"
 import LogoutImg from "../../../../../public/DashboardSvg/LogoutIcon.svg"
@@ -21,6 +22,8 @@ const statsData = [
 
 const AccountLargeScreen = ({handleCopy, isCopied, setOpenChangePasswordModal}: AccountLargeScreenProps) => {
 
+   const router = useRouter();
+
     return ( 
       <>
         <div className="bd min-h-[750px] mt-[104px] w-full px-[48px] py-[35px] relative z-50">
@@ -37,7 +40,7 @@ const AccountLargeScreen = ({handleCopy, isCopied, setOpenChangePasswordModal}: 
                   <p className="bt text-[14px]  ">Email Verified</p>
                 </div>                
               </div>
-              <div className="fc ">
+              <div className="fc cursor-pointer " onClick={() => router.push('/SignIn')}>
                  <Image src={LogoutImg} alt="logout-icon"/>
                   <p className="text-[#DF0000] text-[16px] ml-[8px]">Logout</p>
               </div>

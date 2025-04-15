@@ -1,4 +1,6 @@
 'use client'
+
+
 import { useState } from "react";
 import AccountLargeScreen from "@/components/DashboardInterface/AccountInterface/AccountLargeScreen";
 import MobileViewInterface from "@/components/DashboardInterface/AccountInterface/MobileViewInterface";
@@ -22,7 +24,7 @@ const Account = () => {
   return (
     <>
       {showSuccess && 
-       <div className="z-50 absolute right-0 mt-44  hidden md:flex ">
+       <div className="z-50 absolute right-0 mt-44 hidden md:flex mr-9   ">
           <SuccesfullMessage
             tittle="New Password Set"
             description="New password created. Access your account using your new password."
@@ -41,7 +43,7 @@ const Account = () => {
        </div>
       }
 
-    <div className="md:flex justify-center">
+    <div className="md:flex justify-center  ">
       {openChangePasswordModal && <AccountModal setShowSuccess={setShowSuccess} setOpenChangePasswordModal={setOpenChangePasswordModal}/>}
     </div>
 
@@ -52,8 +54,8 @@ const Account = () => {
     }
 
       <div
-        className={`w-full md:px-[36px] py-[20px] ${
-          openChangePasswordModal ? "blur-sm" : ""
+        className={`w-full md:px-[36px] py-[20px]  ${
+          openChangePasswordModal ? "blur-sm " : ""
         }`}
       >
         <div className="hidden md:flex relative bg-white z-0">

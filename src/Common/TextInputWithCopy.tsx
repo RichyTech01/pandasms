@@ -1,20 +1,19 @@
 
 
-import React, { useState } from "react";
 import Image from "next/image";
 import CopyIcon from "../../public/DashboardSvg/CopyIcon.svg"
 
 
 interface InputFieldProps {
     label: string;
-    value: string;
+    value?: any;
     type?: string
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder:string
     setCopied: React.Dispatch<React.SetStateAction<boolean>>
   }
 
-const TextInputWithCopy = ({ label, type, value,onChange, placeholder, setCopied  }: InputFieldProps) => {
+const TextInputWithCopy = ({ label, type, value, onChange, placeholder, setCopied  }: InputFieldProps) => {
 
     const handleCopy = () => {
       navigator.clipboard.writeText(value);

@@ -25,7 +25,7 @@ const SupportScreen = () => {
             />
           }
           {showSuccess && 
-            <div className="absolute right-0 top-0 z-50 mt-16 lg:mr-10  ">
+            <div className="absolute right-0 top-0 z-50 md:mt-16 lg:mr-10 md:mx-[35px] mx-[20px] mt-28 ">
                 <SuccesfullMessage 
                   tittle="Ticket Resolved"
                   description="Your support ticket with Ticket ID ##rty55533 has been resolved successfully."

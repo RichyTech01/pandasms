@@ -24,7 +24,7 @@ const SuccesfullMessage = ({handleClose, tittle, description }: SuccesfullMessag
         animate={{ y: 0, opacity: 1 }}
         exit={{ x: "100%", opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
-        className="bg-[#F9FAFB] rounded-[16px] hidden md:flex py-[27.2px] px-[26px] w-[480px] relative items-center  mr-20 border-[#E6E6E6] border  "
+        className="bg-[#F9FAFB] rounded-[16px] hidde md  flex py-[27.2px] px-[26px] max-w-[480px] w-full  relative items-center  border-[#E6E6E6] border  "
       >
         <div className="absolute right-0 top-0 center mt-[14px] h-[28px] w-[28px] mr-[15px]  " onClick={handleClose} >
           <Image src={CloseIcon} alt="close-icon"/>
@@ -47,7 +47,7 @@ const SuccesfullMessage = ({handleClose, tittle, description }: SuccesfullMessag
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: "100%", opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
-        className="absolute inset-0 flex flex-col items-center justify-center md:hidden bg-white h-[calc(100vh-64px)] overflow-hidden  "
+        className="absolute inset-0  flex-col items-center justify-center hidden  bg-white h-[calc(100vh-64px)] overflow-hidden  "
       >
         <div className="w-full max-w-[350px] flex flex-col items-center text-center px-4">
           <Image src={SuccesImg} alt="success-img" className="w-[80px] h-[80px]" />

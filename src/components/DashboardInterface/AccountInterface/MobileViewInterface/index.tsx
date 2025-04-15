@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import UserImg from "../../../../../public/DashboardSvg/AccountIcon.svg"
 import CopyImg from "../../../../../public/DashboardSvg/CopyIcon.svg"
@@ -22,6 +23,8 @@ const statsData = [
 
 
 const MobileViewInterface = ({isCopied, handleCopy, setOpenChangePasswordModal}: AccountMobileScreenProps) => {
+  const router = useRouter();
+
     return ( 
         <div className="bg-[#F9FAFB] h-[100vh] overflow-auto py-[98px]">
             <div className="bg-white mt-[18px] rounded-[12px] mx-[20px] py-[20px] flex flex-col items-center   ">
@@ -65,7 +68,7 @@ const MobileViewInterface = ({isCopied, handleCopy, setOpenChangePasswordModal}:
            }
             </div>
 
-            <div className="fc mt-[30px] center  ">
+            <div className="fc mt-[30px] center  cursor-pointer  " onClick={() => router.push('/SignIn')}>
                  <Image src={LogoutImg} alt="logout-icon"/>
                   <p className="text-[#DF0000] text-[16px] ml-[8px]">Logout</p>
               </div>
