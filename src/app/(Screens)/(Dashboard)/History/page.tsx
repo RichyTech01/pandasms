@@ -1,3 +1,4 @@
+'use client'
 
 import HistoryDesktopView from "@/components/DashboardInterface/HistoryInterface/HistoryDesktopView";
 import HistoryMobileView from "@/components/DashboardInterface/HistoryInterface/HistoryMobileView";
