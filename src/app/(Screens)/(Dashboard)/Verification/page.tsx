@@ -1,4 +1,4 @@
-
+'use client'
 import SmallerScreen from "@/components/DashboardInterface/VerificationInterface/SmallerScreen";
 import LargerScreen from "@/components/DashboardInterface/VerificationInterface/LargerScreen";
 
