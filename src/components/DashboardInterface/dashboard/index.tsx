@@ -1,13 +1,15 @@
 'use client'
-
+import { useState } from "react";
 import Features from "./Favourite";
 import SearchInput from "@/Common/SearchInput";
 import AllavailableService from "./AllavailableService";
 import SelectCountry from "@/Common/SelectCountry";
+import CountryModal from "@/Common/CountryModal";
 
 
 const DashboardInterface = ({onClick}: {onClick: () => void}) => {
 
+  const [showCountryModal, setShowCountryModal] = useState(true);
 
   return ( 
     <div className="md:px-[36px] py-[20px] md:bg-[#F9FAFB] h-screen">
@@ -27,9 +29,15 @@ const DashboardInterface = ({onClick}: {onClick: () => void}) => {
                     placeholder="Search service"
                   />
                 </div>
-               <div className="md:max-w-[200px] md:ml-[20px] w-full">
+               <div className="md:max-w-[243px] md:ml-[20px] w-full ">
                  <SelectCountry 
+                 onClick={() => setShowCountryModal(!showCountryModal)}
                  />
+                  {showCountryModal && 
+                  <div className="mt-[15px] max-w-[243px] w-full absolute  "> 
+                    <CountryModal />
+                  </div>
+                  }
                </div>
             </div>
           </div> 

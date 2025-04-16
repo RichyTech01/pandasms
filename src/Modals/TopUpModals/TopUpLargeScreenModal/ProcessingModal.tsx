@@ -10,17 +10,18 @@ import QRCodeImg from "../../../../public/DashboardSvg/QrCodeIcon.svg"
 
 type ProcessingModalProps = {
     setShowModal: (showModal: boolean) => void;
+    setNextPage: ( nextPage: number) => void;
   }
 
 
-const ProcessingModal = ({setShowModal}: ProcessingModalProps) => {
+const ProcessingModal = ({setShowModal, setNextPage}: ProcessingModalProps) => {
     return (
         <div className="w-[90%] min-h-[496px] bg-white border-[#E6E6E6] border-[0.5px] md:absolute rounded-[12px] z-50 md:mt-[120px] max-w-[700px] mx-auto px-[38px] py-[30px] ">
            <div>
               <div className=" between ">
                 <p className="text-[14px] ">Time left: <span className="text-[#DF0000]">19:59</span></p>
                 <CancelIcon
-                   setIsOpen={() => setShowModal(false)}
+                   setIsOpen={() => {setShowModal(false); setNextPage(1)}}
                  />
              </div>
 
@@ -49,7 +50,7 @@ const ProcessingModal = ({setShowModal}: ProcessingModalProps) => {
               />
              </div>
 
-             <p className="text-[14px] text-[#DF0000] center mt-6 cursor-pointer " onClick={() => setShowModal(false)}>Cancel Payment</p>
+             <p className="text-[14px] text-[#DF0000] center mt-6 cursor-pointer " onClick={() => {setShowModal(false); setNextPage(1)}}>Cancel Payment</p>
            </div>
         </div>
       );

@@ -29,7 +29,7 @@ const ChooseAnAmount = ({handleNextPage, setShowModal}: ChooseAnAmountProps) => 
     };
 
     return ( 
-        <div className="w-[90%] min-h-[496px] bg-white bb md:absolute rounded-[12px] z-50 md:mt-[120px] max-w-[700px] mx-auto px-[20px]  ">
+        <div className="w-[90%] min-h-[496px] bg-white bb md:absolute rounded-[12px] z-50 md:mt-[120px] max-w-[700px] mx-[20px] px-[20px]  ">
             <div className="absolute right-0 mr-4 cursor-pointer mt-4  ">
               <CancelIcon
                  setIsOpen={() => setShowModal(false)}
@@ -42,7 +42,7 @@ const ChooseAnAmount = ({handleNextPage, setShowModal}: ChooseAnAmountProps) => 
             </div>
 
              <div className="mt-[30px] ">
-             <div className="grid lg:grid-cols-5 grid-cols-4   item-center justify-between flex-wrap gap-y-[20px] gap-x-[12px] ">
+             <div className="grid lg:grid-cols-5 grid-cols-4 item-center justify-between flex-wrap gap-y-[20px] gap-x-[12px] ">
                     {presetAmounts.map((amount) => (
                     <button
                         key={amount}

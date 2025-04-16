@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from "react";
+
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import UserImg from "../../../../../public/DashboardSvg/AccountIcon.svg"
@@ -16,17 +16,19 @@ const statsData = [
   
   type AccountLargeScreenProps = {
     isCopied: boolean
+    setShowSuccess: React.Dispatch<React.SetStateAction<boolean>>
     handleCopy: () => void
     setOpenChangePasswordModal: React.Dispatch<React.SetStateAction<boolean>>
+    setIsCopied: React.Dispatch<React.SetStateAction<boolean>>
   }
 
-const AccountLargeScreen = ({handleCopy, isCopied, setOpenChangePasswordModal}: AccountLargeScreenProps) => {
+const AccountLargeScreen = ({setShowSuccess, handleCopy, isCopied, setOpenChangePasswordModal, setIsCopied}: AccountLargeScreenProps) => {
 
    const router = useRouter();
 
     return ( 
       <>
-        <div className="bd min-h-[750px] mt-[104px] w-full px-[48px] py-[35px] relative z-50">
+        <div className="bd min-h-[750px] mt-[104px] w-full px-[48px] py-[35px] relative  ">
            <div>
               <p className="text-[18px] font-bold black ">Account Setting</p>
               <p className="text-[14px] mt-[8px] ash ">Manage your profile and account settings here</p>
@@ -64,15 +66,19 @@ const AccountLargeScreen = ({handleCopy, isCopied, setOpenChangePasswordModal}: 
               <Image src={CopyImg} alt="copy-icon " onClick={handleCopy}/>
            </div> 
 
-           <p className="mt-[19px] bt text-[14px] cursor-pointer  " onClick={()=> setOpenChangePasswordModal(prev => !prev)} >Change Password</p>
+           <p className="mt-[19px] bt text-[14px] cursor-pointer  " onClick={()=> {setOpenChangePasswordModal(prev => !prev); setShowSuccess(false)}} >Change Password</p>
 
           
         </div>
         {isCopied && 
-            <div className="absolute inset-0 z-50 center">
-              <ClipBoardSuccess />
-            </div>
-           }
+  <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+    <div className="pointer-events-auto">
+      <ClipBoardSuccess setShowSuccess={setIsCopied} />
+    </div>
+  </div>
+}
+
+
         </>
      );
 }

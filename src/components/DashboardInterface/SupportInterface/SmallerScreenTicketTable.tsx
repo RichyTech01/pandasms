@@ -5,9 +5,10 @@ import MobileTable from "@/Common/MobileTable";
  type SmallerScreenTicketTableProps = {
     setshowSuccess: React.Dispatch<React.SetStateAction<boolean>>
     setShowChat:React.Dispatch<React.SetStateAction<boolean>>
+    setNewTicketModal: React.Dispatch<React.SetStateAction<boolean>>
  }
  
-const SmallerScreenTicketTable = ({setShowChat, setshowSuccess}: SmallerScreenTicketTableProps) => {
+const SmallerScreenTicketTable = ({setShowChat, setshowSuccess, setNewTicketModal}: SmallerScreenTicketTableProps) => {
 
     return ( 
         <div>
@@ -15,7 +16,7 @@ const SmallerScreenTicketTable = ({setShowChat, setshowSuccess}: SmallerScreenTi
               <div className=" w-full  mt-[20px] ">
                     <Button 
                      label="New Ticket"
-                     onClick={() => {}}
+                     onClick={() => setNewTicketModal(prev => !prev)}
                      font="font-normal"
                     />
                 </div>

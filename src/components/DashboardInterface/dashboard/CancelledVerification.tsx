@@ -4,11 +4,11 @@ import CancelIcon from "@/Common/CancelIcon";
 import Button from "@/Common/Button";
 
 type CancelledVerificationProps = {
-    handleNextstep: () => void
+    // handleNextstep: () => void
     setIsOpen:  React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const CancelledVerification = ({handleNextstep, setIsOpen}: CancelledVerificationProps) => {
+const CancelledVerification = ({ setIsOpen}: CancelledVerificationProps) => {
     return ( 
         <div className=" absolute max-w-[555px] bg-white rounded-[20px] border-[0.5px] border-[#E6E6E6] py-[34px] md:px-[38px] px-[16px] w-[90%]  md:mt-[94px] mt-[20px] ">
         <div className="absolute top-0 right-0 mt-[15px] mr-[15px]  ">

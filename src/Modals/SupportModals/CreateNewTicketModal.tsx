@@ -10,13 +10,13 @@ type CreateNewTicketModalProps = {
 
 const CreateNewTicketModal = ({setNewTicketModal}: CreateNewTicketModalProps) => {
     return (
-        <div className=" fixed inset-0 flex mt-[13rem] justify-center z-50">
+        <div className="absolute w-full flex mt-[13rem justify-center z-50 pt-[6rem]">
          <div className="w-[90%] min-h-[496px] bg-white bb md:absolute rounded-[12px] z-50 max-w-[632px] mx-auto px-[20px] pb-[56px]  ">
-            <div className="absolute right-0 mr-[29px] mt-[29px]">
+            <div className="absolute right-0 mr-[29px] mt-[29px] hidden md:flex">
                 <CancelIcon setIsOpen={setNewTicketModal} />
             </div>
 
-            <h2 className="black text-[18px] font-bold text-center pt-[56px]">Create New Ticket</h2>
+            <h2 className="black text-[18px] font-bold text-center pt-[28.5px]">Create New Ticket</h2>
 
             <div className="space-y-[30px] mt-[30px] max-w-[431px] w-full mx-auto  ">
                 <Input 

@@ -7,7 +7,7 @@ const CountryModal = () => {
 
 
     return ( 
-        <div className="bg-[#F9FAFB] rounded-[20px] w-[90%] h-[320px] absolute right-0 mx-[20px] py-[54px] px-[43px]  ">
+        <div className="bg-[#F9FAFB] rounded-[20px] w-[90% w-ful  h-[320px] py-[54px] px-[43px]  ">
             <div>
                 <SearchInput 
                   placeholder="Search country / code"

@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from "react";
 import ChooseAnAmount from "./ChooseAnAmount";
 import ProcessingModal from "./ProcessingModal";
 
@@ -16,7 +15,7 @@ const TopUpModal = ({setShowModal, handleNextPage, setNextPage, nextPage}: TopUp
        
         
     return ( 
-        <div className="w-full z-50 mx-auto mt-[100px] md:mt-[0] ">
+        <div className="w-full z-50 mx-auto mt-[100px] md:mt-[0] flex justify-center">
            {nextPage === 1 && <ChooseAnAmount 
               handleNextPage={handleNextPage}
               setShowModal={setShowModal}
@@ -24,6 +23,7 @@ const TopUpModal = ({setShowModal, handleNextPage, setNextPage, nextPage}: TopUp
 
             {nextPage === 2 && <ProcessingModal 
               setShowModal={setShowModal}
+              setNextPage={setNextPage}
             />} 
         </div>
      );

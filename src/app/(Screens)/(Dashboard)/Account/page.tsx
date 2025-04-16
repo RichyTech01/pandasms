@@ -59,7 +59,7 @@ const Account = () => {
         }`}
       >
         <div className="hidden md:flex relative bg-white z-0">
-          <AccountLargeScreen handleCopy={handleCopy} isCopied={isCopied} setOpenChangePasswordModal={setOpenChangePasswordModal}/>
+          <AccountLargeScreen setIsCopied={setIsCopied} setShowSuccess={setShowSuccess} handleCopy={handleCopy} isCopied={isCopied} setOpenChangePasswordModal={setOpenChangePasswordModal}/>
         </div>
 
         <div className={`md:hidden relative ${showSuccess && "-z-10 " } `}>

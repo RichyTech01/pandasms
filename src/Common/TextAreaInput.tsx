@@ -6,13 +6,12 @@ import CopyIcon from "../../public/DashboardSvg/CopyIcon.svg"
 interface InputFieldProps {
     label: string;
     value: string;
-    type?: string
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    // onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder:string
     setCopied: React.Dispatch<React.SetStateAction<boolean>>
   }
 
-const TextAreaInput = ({ label, type, value, onChange, placeholder, setCopied, }: InputFieldProps) => {    
+const TextAreaInput = ({ label, value,  placeholder, setCopied, }: InputFieldProps) => {    
 
         const handleCopy = () => {
           navigator.clipboard.writeText(value);
@@ -28,6 +27,7 @@ const TextAreaInput = ({ label, type, value, onChange, placeholder, setCopied, }
           <textarea
             placeholder={placeholder}
             className="flex-1 placeholder:text-[#8A8A8A] text-[14px] appearance-none bg-transparent resize-none outline-none placeholder:max-w-[330px] overflow-hidden "
+            value={value}
           />
           <button onClick={handleCopy} className="ml-2 ">
             <Image src={CopyIcon} alt="copyIcon" />

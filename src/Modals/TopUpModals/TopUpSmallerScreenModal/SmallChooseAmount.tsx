@@ -5,14 +5,14 @@ import Input from '@/Common/Input';
 import Button from '@/Common/Button';
 
 type ChooseAnAmountProps = {
-    setShowModal: (visible: boolean) => void;
+    // setShowModal: (visible: boolean) => void;
     handleNextPage: () => void
 }
 
 const presetAmounts = [10, 50, 100, 200, 400, 500, 1000, 1500 ];
 
 
-const SmallChooseAmount = ({handleNextPage, setShowModal}: ChooseAnAmountProps) => {
+const SmallChooseAmount = ({handleNextPage,}: ChooseAnAmountProps) => {
 
     const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
     const [customAmount, setCustomAmount] = useState('');

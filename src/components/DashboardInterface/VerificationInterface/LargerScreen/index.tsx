@@ -30,9 +30,7 @@ const data = [
     },
   ];
 
-  const column = [
-    {}
-  ]
+  
   const LargerScreen = () => {
     return (
       <Table 

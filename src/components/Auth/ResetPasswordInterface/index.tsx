@@ -7,7 +7,6 @@ import ResetPassImg from "../../../../public/Svg/ResetPassImg.svg"
 
 
 const ResetPasswordInterface = ({ onNext }: { onNext: () => void }) => {
-    const router = useRouter()
 
     return ( 
         <div className="md:my-[127px] my-[40px] md:flex-row flex flex-col items-center xl:mx-[150px] lg:mx-[50px]  md:mr-[20px] ">

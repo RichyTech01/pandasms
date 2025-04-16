@@ -34,7 +34,7 @@ const NewPasswordModal = ({setOpenChangePasswordModal, setShowSuccess}: NewPassw
 
            <Button 
             label="Continue"
-            onClick={() => {setOpenChangePasswordModal(false); setShowSuccess(prev=> !prev)}}
+            onClick={() => {setOpenChangePasswordModal(false); setShowSuccess(true)}}
            />
            </div>
         </div>

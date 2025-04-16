@@ -1,4 +1,5 @@
 'use client'
+
 import { useState } from "react";
 import Button from "@/Common/Button";
 import LargerScreenSupport from "./LargerScreenSupport";
@@ -17,16 +18,17 @@ const SupportInterface = ({setShowChat, setshowSuccess}: SupportProps) => {
     const [newTicketModal, setNewTicketModal] =useState(false)
 
     return ( 
-        <div className="md:w-full mx-auto md:bg-[#F9FAFB] md:border-[0.5px] border-[#E6E6E6] lg:px-[48px] mt-[100px] px-[20px] flex-1 py-[30px] md:rounded-[20px] h-screen md:min-h-[650px] md:h-full w-full  ">
-           {newTicketModal && 
-           <div className="fixed w-full z-50">
-           <CreateNewTicketModal setNewTicketModal={setNewTicketModal}/>
+        <>
+         {newTicketModal && 
+        <div className=" w-full z-50 flex justify-center md:bg-transparent bg-[#F9FAFB] h-screen md:h-auto md:static fixed sm:mt-[56px] mt-[92px] ">
+             <CreateNewTicketModal setNewTicketModal={setNewTicketModal}/>
            </div>
-           }
+          }
 
-           <div className={` md:w-full mx-auto bg-[#F9FAFB] flex-1 h-full  ${
+        <div className={` md:w-full mx-auto md:bg-[#F9FAFB] md:border-[0.5px] border-[#E6E6E6] lg:px-[48px] sm:mt-[50px] md:mt-[100px] mt-[100px] px-[20px] flex-1 py-[30px] md:rounded-[20px] h-screen md:min-h-[650px] md:h-full w-full ${
                newTicketModal ? "blur-sm " : ""
-              }`}>
+              } `}>
+           <div className={` md:w-full mx-auto bg-[#F9FAFB flex-1 h-full  `}>
             <div className=" hidden md:flex flex-row items-center justify-between "> 
                 <div>
                     <p className="text-[#131619] text-[16px] font-medium ">Support Ticket</p>
@@ -49,11 +51,13 @@ const SupportInterface = ({setShowChat, setshowSuccess}: SupportProps) => {
             <div className="md:hidden">
                 <SmallerScreenTicketTable 
                  setShowChat={setShowChat}
-                 setshowSuccess={setshowSuccess}/>
+                 setshowSuccess={setshowSuccess}
+                 setNewTicketModal={setNewTicketModal}
+                 />
             </div>
             </div>
         </div>
-
+        </>
      );
 }
  

@@ -6,7 +6,7 @@ import CopyIcon from "../../public/DashboardSvg/CopyIcon.svg"
 
 interface InputFieldProps {
     label: string;
-    value?: any;
+    value?: string;
     type?: string
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder:string
@@ -16,7 +16,7 @@ interface InputFieldProps {
 const TextInputWithCopy = ({ label, type, value, onChange, placeholder, setCopied  }: InputFieldProps) => {
 
     const handleCopy = () => {
-      navigator.clipboard.writeText(value);
+      navigator.clipboard.writeText(value || "");
       setCopied(true);
       setTimeout(() => setCopied(false), 1500); 
     };

@@ -5,13 +5,13 @@ import Button from "@/Common/Button";
 import Image from "next/image";
 import Logo from "../../../public/Svg/Logo.svg";
 import { useState, } from "react";
-import Hamburger from "../../../public/Svg/Hamburger.svg"
+// import Hamburger from "../../../public/Svg/Hamburger.svg"
 
 const AuthNavBar = () => {
 
     const router = useRouter();
 
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+    // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
 
 
     return (

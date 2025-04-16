@@ -61,7 +61,7 @@ const GetCode = ({handleNextstep, setIsOpen}: GetcodeProps) => {
                  </div>
                
                 {copied && <div className="absolute inset-[90px]  ">
-                     <ClipBoardSuccess />
+                     <ClipBoardSuccess setShowSuccess={setCopied} />
                 </div> }
             </div>
 
