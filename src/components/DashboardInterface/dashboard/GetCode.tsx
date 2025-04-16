@@ -49,7 +49,7 @@ const GetCode = ({handleNextstep, setIsOpen}: GetcodeProps) => {
                    label="Message" 
                    placeholder="Please request only one code. Multiple request may result in issues with your code."
                    value={numValue}
-                   onChange={(e) => setNumValue(e.target.value)} 
+                  //  onChange={(e) => setNumValue(e.target.value)} 
                    setCopied={setCopied}
                  />
 
