@@ -42,7 +42,6 @@ const WantsToPurchaseModal = ({ setIsOpen}: WantsToPurchaseModal) => {
         />}
 
          {step === 4 && <CancelledVerification 
-           handleNextstep={handleNextstep}
            setIsOpen={setIsOpen} 
         />}
         
