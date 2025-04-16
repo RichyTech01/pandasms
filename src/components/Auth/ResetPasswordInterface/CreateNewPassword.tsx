@@ -16,6 +16,7 @@ const CreateNewPassword = () => {
           {/* <div></div> */}
             {changePass &&  <SuccesfullMessage 
               tittle="password"
+              description="New password created. Access your account using your new password."
               handleClose={() => setChangePass(prev => !prev)}
             />}
            
