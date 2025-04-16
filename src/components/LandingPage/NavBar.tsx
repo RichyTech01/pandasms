@@ -29,7 +29,7 @@ const NavBar = () => {
             {/* Desktop Navigation Links (Hidden on Mobile) */}
             <div className="w-[262px] items-center justify-around hidden md:flex  ">
                 <ol className="text-[#545454] text-[14px] hover:text-[#116EFC]">
-                    <a href="" className="py-[6px] px-[20px]">Home</a>
+                    <a href="/" className="py-[6px] px-[20px]">Home</a>
                 </ol>
                 <ol className="text-[#545454] text-[14px] hover:text-[#116EFC]"> 
                     <a href="#FaqSec" className="py-[6px] px-[20px]">FAQ</a>
@@ -48,13 +48,13 @@ const NavBar = () => {
             {isMobileMenuOpen && (
                 <div className="absolute top-[120px] left-0 w-full bg-white border-t border-[#E6E6E6] md:hidden">
                     <ol className="text-[#545454] text-[14px] hover:text-[#116EFC] block text-center py-2">
-                        <a href="" className="block py-[6px] px-[20px]">Home</a>
+                        <a href="/" className="block py-[6px] px-[20px]">Home</a>
                     </ol>
                     <ol className="text-[#545454] text-[14px] hover:text-[#116EFC] block text-center py-2">
-                        <a href="" className="block py-[6px] px-[20px]">FAC</a>
+                        <a href="#FaqSec" className="block py-[6px] px-[20px]">FAC</a>
                     </ol>
                     <ol className="text-[#545454] text-[14px] hover:text-[#116EFC] block text-center py-2">
-                        <a href="" className="block py-[6px] px-[20px]">Contact</a>
+                        <a href="#JoinOurCommunity" className="block py-[6px] px-[20px]">Contact</a>
                     </ol>
                 </div>
             )}

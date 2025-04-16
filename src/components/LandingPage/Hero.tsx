@@ -1,5 +1,6 @@
 'use client'
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Button from "@/Common/Button";
 import HerosecImg from "../../../public/Svg/HeroSecImg.svg"
@@ -9,6 +10,7 @@ import MobileImg from "../../../public/Svg/MobileDashImage.svg"
 import Services from "./Services";
 
 const Hero = () => {
+    const router = useRouter()
     const [activeButton, setActiveButton] = useState('Service')
 
     return ( 
@@ -30,13 +32,13 @@ const Hero = () => {
                     {/* Mobile Button  */}
 
                     <span className="max-w-[204px w-full md:hidden center ">
-                       <Button label="Get Started" width="max-w-[335px]"/>
+                       <Button onClick={()=> router.push('/CreateAccount')} label="Get Started" width="max-w-[335px]"/>
                     </span>
 
                     {/* Desktop button  */}
                     
                     <span className="max-w-[204px] w-full hidden md:block md:ml-4 hover:opacity-90">
-                       <Button label="Get Started" width={"max-w-[204px] hover:opacity-70"}/>
+                       <Button label="Get Started" onClick={()=> router.push('/CreateAccount')} width={"max-w-[204px] hover:opacity-70"}/>
                     </span>
                     <button className="rounded-[16px] h-[56px] md:max-w-[126px] max-w-[335px] w-full border border-[#116EFC] text-[14px] text-[#116EFC] flex items-center justify-center">
                         <Image src={Faq} alt="faq" className="mr-[4px]" />

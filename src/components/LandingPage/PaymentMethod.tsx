@@ -14,8 +14,8 @@ const PaymentMethod = () => {
                 <p className="font-bold text-[24px] leading-[30.24px] ">Accepted Payment Method</p>
             </div>
 
-            <div className="mt-[30px] flex items-center gap-[8px] overflow-x-auto scroll-container w-full px-[20px] center">
-                <div className="bg-white rounded-[5.56px] h-[56.96px] w-[104.2px] gap-[8.34px] center flex-shrink-0">
+            <div className="mt-[30px] flex items-center gap-[8px] overflow-x-auto w-full px-[20px] whitespace-nowrap scroll-container ">
+            <div className="bg-white rounded-[5.56px] h-[56.96px] w-[104.2px] gap-[8.34px] center flex-shrink-0">
                     <Image src={BitcoinImg} alt="BitcoinImg" />
                     <p className="text-[#131619] text-[9.73px] font-Geint">Bitcoin</p>
                 </div>
