@@ -17,6 +17,7 @@ const HistoryMobileView = () => {
               data5="$200.00"
               label6="Status"
               data6="Completed"
+              onClick={() => {}}
             />
 
         </div>
