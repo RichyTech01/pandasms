@@ -1,3 +1,5 @@
+
+
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/Svg/Logo.svg";
@@ -13,7 +15,7 @@ const DashboardHeader = () => {
           <div className="between w-full">
             <div className="flex items-center">
                 <h1 className="text-[#0F64E5] font-Geint leading-[31.7px] font-bold md:text-[31.7px] flex items-center text-[19.97px]">
-                    <Image src={Logo} alt="logo" className="mr-[8.97px]" priority />
+                    <Image src={Logo} alt="logo" className="mr-[8.97px]  " priority />
                     PandaSMS
                 </h1>
 

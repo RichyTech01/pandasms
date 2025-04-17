@@ -11,10 +11,10 @@ const PaymentMethod = () => {
     return ( 
         <div className="bg-[#F9FAFB] md:h-[231px] h-[212px] center flex-col mt-[30px]  ">
             <div>
-                <p className="font-bold text-[24px] leading-[30.24px] ">Accepted Payment Method</p>
+                <p className="font-bold text-[24px] leading-[30.24px] text-center  ">Accepted Payment Method</p>
             </div>
 
-            <div className="mt-[30px] flex items-center gap-[8px] overflow-x-auto w-full px-[20px] whitespace-nowrap scroll-container ">
+            <div className="mt-[30px] flex items-center gap-[8px] overflow-x-auto w-full px-[20px] whitespace-nowrap scroll-container justify-center ">
             <div className="bg-white rounded-[5.56px] h-[56.96px] w-[104.2px] gap-[8.34px] center flex-shrink-0">
                     <Image src={BitcoinImg} alt="BitcoinImg" />
                     <p className="text-[#131619] text-[9.73px] font-Geint">Bitcoin</p>

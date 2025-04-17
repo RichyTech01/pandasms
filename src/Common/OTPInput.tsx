@@ -47,11 +47,12 @@ const OTPInput = ({
       <div className="flex justify-between items-center mt-[12px] ">
         {otp.map((digit, index) => (
           <input
+            type="text"
+            inputMode="numeric"
             key={index}
             ref={(el) => {
               if (el) inputRefs.current[index] = el;
             }}
-            type="text"
             maxLength={1}
             value={digit}
             onChange={(e) => handleChange(index, e.target.value)}
